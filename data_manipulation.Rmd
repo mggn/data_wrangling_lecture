@@ -1,0 +1,32 @@
+---
+title: "data_manipulation"
+author: "mggn"
+date: "9/22/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+```
+
+### Data manipulation
+you want to select relevant variables, filter out unnecessary obs,
+create new vars, change existing ones, arrange in an easy to digest format
+
+dplyr package allows us to select, filter, mutate, and arrange
+modularity is intentional, and these functions share a structure
+
+piping allows you to tie together a sequence actions, come from the magrittr 
+package
+
+PIPES, sequence of actions
+in R, you can NEST actions like do(brush(wakeup(Maria)))
+like those russian nesting dolls
+you can alternatively do it in a sequence
+--> piping is a solution to this
+%>% represents "and then"
+happy = wake_up(maria) %>% brush_teeth() %>% drink_covfefe()
+
+```{r}
+
+```
