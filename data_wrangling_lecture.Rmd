@@ -1,0 +1,25 @@
+---
+title: "data_wrangling_lecture"
+author: "mggn"
+date: "9/22/2020"
+output: github_document
+---
+
+```{r setup}
+library(tidyverse)
+```
+
+Let's now try to read in some data:
+
+```{r data}
+litters_df = read_csv("./data/FAS_litters.csv")
+litters_def = janitor::clean_names(litters_df)
+
+#janitor::clean_names takes the clean_names function from the janitor package
+#instead of having to load the whole janitor package
+```
+
+Take a look at the data by just printing in the cosole
+```{r}
+litters_def
+```
