@@ -7,7 +7,18 @@ output: github_document
 
 ```{r setup}
 library(tidyverse)
+library(readxl) #to import excel datasets
+library(haven) #to import SAS datasets
 ```
+
+There are two kinds of paths:
+
+-Absolute: a file or folder’s “full address” on your computer
+-Relative: directions to a file or folder from your current working directory
+
+RELATIVE paths are preferable, as they are portable
+this means that, if you share a relative path then the code won't "break"
+Absolute paths are specific to your computer!
 
 Let's now try to read in some data:
 
@@ -23,3 +34,19 @@ Take a look at the data by just printing in the cosole
 ```{r}
 litters_def
 ```
+
+
+```{r}
+tail(litters_def)
+```
+
+```{r}
+skimr::skim(litters_def)
+```
+
+To view the dataset in a new window, we can use the command view() BUT this is
+best used by typing into the console, and not putting it in a code chunk in the 
+r markdown file. This is because including a command that opens up a new window
+in an R markdown file can cause issues when knitting
+
+write_csv(subdata, "./data/mlbsubtable.csv") <-- this EXPORTS data!
