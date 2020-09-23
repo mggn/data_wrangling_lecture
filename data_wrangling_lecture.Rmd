@@ -50,3 +50,6 @@ r markdown file. This is because including a command that opens up a new window
 in an R markdown file can cause issues when knitting
 
 write_csv(subdata, "./data/mlbsubtable.csv") <-- this EXPORTS data!
+
+
+

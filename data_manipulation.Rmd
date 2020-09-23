@@ -28,5 +28,10 @@ you can alternatively do it in a sequence
 happy = wake_up(maria) %>% brush_teeth() %>% drink_covfefe()
 
 ```{r}
-
+litters_df = read_csv("./data/FAS_litters.csv")
+litters_df = janitor::clean_names(litters_df)
+select(litters_df, -litter_number) #aka keep everything except for litter #
 ```
+
+we can select what we want to keep by using syntax select(dataset, var, var)
+rename and select can do similar things
